@@ -1,219 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>For You ❤️</title>
+<meta charset="UTF-8">
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-      font-family: Georgia, serif;
-      background: #fff4f6;
-      color: #4a2932;
-    }
+<title>For My Baby ❤️</title>
 
-    .container {
-      width: 90%;
-      max-width: 600px;
-      padding: 40px 20px;
-    }
+<style>
 
-    .small {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    h1 {
-      font-size: 48px;
-      line-height: 1.1;
-      margin: 25px 0;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  background: #fff4f3;
+  color: #4a1f2b;
+  font-family: Georgia, serif;
+  text-align: center;
+}
 
-    button {
-      margin: 15px 5px;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 30px;
-      background: #91455b;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+}
 
-    button:hover {
-      transform: scale(1.05);
-    }
-  </style>
+.card {
+  width: 100%;
+  max-width: 650px;
+  padding: 45px 25px;
+}
+
+.small {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #8b4659;
+}
+
+h1 {
+  font-size: clamp(42px, 10vw, 70px);
+  line-height: 1.05;
+  margin: 25px 0;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+button {
+  border: none;
+  border-radius: 40px;
+  padding: 15px 28px;
+  margin: 10px 5px;
+  background: #7f263f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #631d31;
+}
+
+.secondary {
+  background: #d9a5ae;
+  color: #4a1f2b;
+}
+
+.heart {
+  font-size: 50px;
+  margin: 15px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.photo {
+  height: 190px;
+  border-radius: 20px;
+  background: #e8c3c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f263f;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.date-card {
+  background: #fffafa;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(100,30,50,0.08);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.letter {
+  background: #fffafa;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: left;
+  line-height: 1.8;
+  box-shadow: 0 10px 30px rgba(100,30,50,0.08);
+}
+
+.floating {
+  position: fixed;
+  pointer-events: none;
+  animation: float 6s linear forwards;
+  font-size: 22px;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <div class="container">
 
-    <p class="small">A little something for you...</p>
+<!-- HOME -->
 
-    <h1>
-      Happy<br>
-      Boyfriend's Day ❤️
-    </h1>
+<section class="page" id="home">
 
-    <p>
-      I made this little corner of the internet
-      just for you.
-    </p>
+<div class="card">
 
-    <button onclick="openLetter()">
-      Open it 💌
-    </button>
+<p class="small">
+A little something for you...
+</p>
 
-  </div>
+<h1>
+Happy<br>
+Boyfriend's Day ❤️
+</h1>
 
-  <script>
+<p>
+For my Baby,
+<br>
+<strong>Ashlyn Laren Machado</strong>
+</p>
 
-    function openLetter() {
+<p>
+I made a tiny corner of the internet
+just for you.
+</p>
 
-      document.querySelector(".container").innerHTML = `
+<button onclick="show('story')">
+Open it 💌
+</button>
 
-        <p class="small">Chapter One</p>
+</div>
 
-        <h1>
-          Hey you... ❤️
-        </h1>
-
-        <p>
-          I haven't known you for 25 years,
-          but I hope I get to know you
-          for the rest of my life.
-        </p>
-
-        <button onclick="nextPage()">
-          Continue →
-        </button>
-
-      `;
-    }
+</section>
 
 
-    function nextPage() {
 
-      document.querySelector(".container").innerHTML = `
+<!-- STORY -->
 
-        <p class="small">A little question...</p>
+<section class="page hidden" id="story">
 
-        <h1>
-          How well do you know me? 👀
-        </h1>
+<div class="card">
 
-        <p>
-          Let's find out...
-        </p>
+<p class="small">
+Chapter One
+</p>
 
-        <button onclick="quiz()">
-          Take the quiz 🎮
-        </button>
+<h1>
+How it all started...
+</h1>
 
-      `;
-    }
+<p>
 
+We met on Bumble.
 
-    function quiz() {
+I had no idea that one little swipe
+would eventually lead me here —
+making an entire website for you. 🥹
 
-      document.querySelector(".container").innerHTML = `
+</p>
 
-        <p class="small">Question 1</p>
+<button onclick="show('date')">
+Our first date →
+</button>
 
-        <h1>
-          What's my favourite thing about you?
-        </h1>
+</div>
 
-        <button onclick="wrong()">
-          Your hair 😌
-        </button>
-
-        <button onclick="correct()">
-          The way you make me feel ❤️
-        </button>
-
-        <button onclick="wrong()">
-          Your jokes 😂
-        </button>
-
-      `;
-    }
+</section>
 
 
-    function correct() {
 
-      document.querySelector(".container").innerHTML = `
+<!-- FIRST DATE -->
 
-        <h1>
-          You got it! 🥹❤️
-        </h1>
+<section class="page hidden" id="date">
 
-        <p>
-          Okay... maybe you do know me
-          pretty well.
-        </p>
+<div class="card">
 
-        <button onclick="finalMessage()">
-          One last thing →
-        </button>
+<p class="small">
+The beginning ❤️
+</p>
 
-      `;
-    }
+<h1>
+Our first little date 🤍
+</h1>
+
+<div class="date-card">
+
+<p>
+<strong>Waffee House</strong>
+</p>
+
+<p>
+I still remember our first date.
+</p>
+
+<p>
+You had your Biscoff waffles and Oreo milkshake,
+while I had my Nutella waffle with ice cream
+and a cold coffee.
+</p>
+
+<p>
+And somewhere between all the talking,
+laughing, waffles and coffee...
+</p>
+
+<p class="quote">
+you stole my ice cream. 😭❤️
+</p>
+
+<p>
+Little did I know that this ordinary little date
+would become one of the memories I'd always want
+to keep.
+</p>
+
+</div>
+
+<button onclick="show('quiz')">
+Continue →
+</button>
+
+</div>
+
+</section>
 
 
-    function wrong() {
 
-      alert("Hmmmm... try again 😌❤️");
+<!-- QUIZ -->
 
-    }
+<section class="page hidden" id="quiz">
+
+<div class="card">
+
+<p class="small">
+Let's see...
+</p>
+
+<h1>
+How well do you know me? 👀
+</h1>
+
+<p>
+Question 1
+</p>
+
+<h2>
+What did I order on our first date?
+</h2>
+
+<button onclick="wrong()">
+Biscoff waffles
+</button>
+
+<button onclick="correct()">
+Nutella waffle + ice cream
+</button>
+
+<button onclick="wrong()">
+Oreo milkshake
+</button>
+
+</div>
+
+</section>
 
 
-    function finalMessage() {
 
-      document.querySelector(".container").innerHTML = `
+<!-- QUIZ CORRECT -->
 
-        <p class="small">
-          For you ❤️
-        </p>
+<section class="page hidden" id="correct">
 
-        <h1>
-          I haven't known you for 25 years...
-        </h1>
+<div class="card">
 
-        <p>
-          But I hope I get to know you
-          for the rest of my life.
-          <br><br>
-          Happy Boyfriend's Day,
-          my love. ❤️
-        </p>
+<h1>
+You remembered! 🥹❤️
+</h1>
 
-        <div style="font-size:40px;">
-          💗 🥹 💗
-        </div>
+<p>
+Okay Baby...
+maybe you do pay attention to me.
+</p>
 
-      `;
+<p>
+But I have more questions for you. 👀
+</p>
 
-    }
+<button onclick="show('memories')">
+Show me our memories →
+</button>
 
-  </script>
+</div>
+
+</section>
+
+
+
+<!-- MEMORIES -->
+
+<section class="page hidden" id="memories">
+
+<div class="card">
+
+<p class="small">
+Our little memories
+</p>
+
+<h1>
+Us ❤️
+</h1>
+
+<p>
+Ten little spaces for ten memories.
+</p>
+
+<div class="memory-grid">
+
+<div class="photo">
+PHOTO 1
+</div>
+
+<div class="photo">
+PHOTO 2
+</div>
+
+<div class="photo">
+PHOTO 3
+</div>
+
+<div class="photo">
+PHOTO 4
+</div>
+
+<div class="photo">
+PHOTO 5
+</div>
+
+<div class="photo">
+PHOTO 6
+</div>
+
+<div class="photo">
+PHOTO 7
+</div>
+
+<div class="photo">
+PHOTO 8
+</div>
+
+<div class="photo">
+PHOTO 9
+</div>
+
+<div class="photo">
+PHOTO 10
+</div>
+
+</div>
+
+<button onclick="show('reasons')">
+There's more ❤️
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- REASONS -->
+
+<section class="page hidden" id="reasons">
+
+<div class="card">
+
+<p class="small">
+Tap the hearts
+</p>
+
+<h1>
+Things I love about you
+</h1>
+
+<div>
+
+<span class="heart"
+onclick="heart('Your smile ❤️')">
+❤️
+</span>
+
+<span class="heart"
+onclick="heart('Your voice 🥹')">
+❤️
+</span>
+
+<span class="heart"
+onclick="heart('The way you make me laugh 😂')">
+❤️
+</span>
+
+<span class="heart"
+onclick="heart('The little things you do')">
+❤️
+</span>
+
+<span class="heart"
+onclick="heart('Simply being you ❤️')">
+❤️
+</span>
+
+</div>
+
+<p id="heartMessage"></p>
+
+<button onclick="show('letter')">
+One last thing →
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- LETTER -->
+
+<section class="page hidden" id="letter">
+
+<div class="card">
+
+<p class="small">
+For my Baby
+</p>
+
+<h1>
+A little letter 💌
+</h1>
+
+<div class="letter">
+
+<p>
+My Baby,
+</p>
+
+<p>
+
+I haven't known you for 25 years,
+but I hope I get to know you
+for the rest of my life.
+
+</p>
+
+<p>
+
+From meeting you on Bumble,
+to our first date at Waffee House,
+to you stealing my ice cream...
+somehow all these little moments
+became memories that mean so much to me.
+
+</p>
+
+<p>
+
+I'm so grateful that I met you.
+
+</p>
+
+<p>
+
+Happy Boyfriend's Day, Baby. ❤️
+
+</p>
+
+<p>
+Love,
+<br>
+Me 🥹
+</p>
+
+</div>
+
+<button onclick="finale()">
+One final surprise ✨
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- FINAL -->
+
+<section class="page hidden" id="final">
+
+<div class="card">
+
+<p class="small">
+And finally...
+</p>
+
+<h1>
+I found you. ❤️
+</h1>
+
+<p>
+
+Maybe we don't know what every chapter
+of our story will look like yet.
+
+</p>
+
+<p>
+
+But I'm really happy that
+this chapter has you in it.
+
+</p>
+
+<h2>
+Happy Boyfriend's Day, Baby. ❤️
+</h2>
+
+<div style="font-size:45px;">
+🥹 ❤️ 🥹 ❤️ 🥹
+</div>
+
+<button onclick="createHearts()">
+Tap for kisses 💋
+</button>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+
+function show(id) {
+
+  document.querySelectorAll(".page")
+  .forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  document.getElementById(id)
+  .classList.remove("hidden");
+
+  window.scrollTo(0,0);
+
+}
+
+
+function correct() {
+
+  show("correct");
+
+}
+
+
+function wrong() {
+
+  alert(
+    "Nooo Baby 😭❤️ Try again!"
+  );
+
+}
+
+
+function heart(message) {
+
+  document.getElementById(
+    "heartMessage"
+  ).innerHTML = message;
+
+}
+
+
+function finale() {
+
+  show("final");
+
+  createHearts();
+
+}
+
+
+function createHearts() {
+
+  for(let i = 0; i < 25; i++) {
+
+    const heart =
+    document.createElement("div");
+
+    heart.innerHTML = "❤️";
+
+    heart.className = "floating";
+
+    heart.style.left =
+    Math.random() * 100 + "vw";
+
+    heart.style.bottom = "-30px";
+
+    heart.style.animationDuration =
+    (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 7000);
+
+  }
+
+}
+
+</script>
+
 
 </body>
+
 </html>
