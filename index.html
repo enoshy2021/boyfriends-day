@@ -109,14 +109,15 @@ button:hover {
 .photo {
   height: 190px;
   border-radius: 20px;
+  overflow: hidden;
   background: #e8c3c8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7f263f;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .date-card {
@@ -401,43 +402,43 @@ Ten little spaces for ten memories.
 <div class="memory-grid">
 
 <div class="photo">
-PHOTO 1
+  <img src="IMG_0162.jpeg" alt="Memory 1">
 </div>
 
 <div class="photo">
-PHOTO 2
+  <img src="IMG_0206.jpeg" alt="Memory 2">
 </div>
 
 <div class="photo">
-PHOTO 3
+  <img src="IMG_0524.jpeg" alt="Memory 3">
 </div>
 
 <div class="photo">
-PHOTO 4
+  <img src="IMG_0527.jpeg" alt="Memory 4">
 </div>
 
 <div class="photo">
-PHOTO 5
+  <img src="IMG_1089.jpeg" alt="Memory 5">
 </div>
 
 <div class="photo">
-PHOTO 6
+  <img src="IMG_1221.jpeg" alt="Memory 6">
 </div>
 
 <div class="photo">
-PHOTO 7
+  <img src="IMG_2451.jpeg" alt="Memory 7">
 </div>
 
 <div class="photo">
-PHOTO 8
+  <img src="IMG_2470.jpeg" alt="Memory 8">
 </div>
 
 <div class="photo">
-PHOTO 9
+  <img src="IMG_4641.jpeg" alt="Memory 9">
 </div>
 
 <div class="photo">
-PHOTO 10
+  <img src="IMG_5141.jpeg" alt="Memory 10">
 </div>
 
 </div>
