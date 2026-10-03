@@ -112,11 +112,16 @@ button:hover {
   padding: 8px;
   box-shadow: 0 8px 25px rgba(100,30,50,0.12);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
 }
 
 .photo img {
   width: 100%;
-  height: auto;
+  height: 85vh;
+  object-fit: contain;
   display: block;
   border-radius: 12px;
 }
